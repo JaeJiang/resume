@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+  <meta charset="utf-8">
+  <title>代码1-渐变轮播 12.6</title>
+  <style>
+  html,body,ul,li,p{
+    margin: 0;
+    padding: 0;
+    }
+  li{
+  list-style: none;
+    }
+  a{
+    text-decoration: none;
+    }
+  
+  
+  /*css部分  */
+  
+  .window{
+    width:560px;
+    height:281px;
+    overflow: hidden;
+    position: relative;
+    
+  }
+    
+  .window .ct{
+    position: relative;
+  }
+  
+  .ct li{
+    display: none;
+  }  
+    
+  .ct .show{
+    display: block;
+  } 
+  
+  
+  .ct img{
+    width:640px;
+    height:360px;
+  }
+    
+  .arrow {
+    
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    width:50px;
+    height:50px;
+    line-height: 54px;
+    text-align: center;
+    background-color: #CDB677;
+    color:white;
+    border-radius:25px ;
+    opacity: 0.8;
+    font-size: 20px;
+  }
+  
+  .arrow:hover{
+    opacity: 1;
+  }
+    
+  .pre{
+    left:8px;
+  }
+    
+  .next{
+    right: 8px;
+  }
+  
+  ul.bullet{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom: 4px;
+  }
+  
+  ul.bullet li{
+    display: inline-block;
+    width: 15px;
+    height: 5px;
+    border-radius:3px ;
+    background-color:#CDB677;
+    cursor: pointer;
+    
+  }  
+    
+  ul.bullet .active{
+    background-color:#50C87E;
+  } 
+    
+   
+    
+    
+    
+  </style>
+</head>
+<body>
+ 
+ <!--  html部分 -->
+   <div class="window">
+     <ul class="ct">
+       <li class="show"><a href="#"><img src="http://upload-images.jianshu.io/upload_images/1043191-c52678a2055c0158.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></a></li>
+       <li><a href="#"><img src="http://upload-images.jianshu.io/upload_images/1043191-0f9ff4edcd3a4b49.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></a></li>
+       <li><a href="#"><img src="http://upload-images.jianshu.io/upload_images/1043191-5d6d0300c3ffc4da.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></a></li>
+       <li><a href="#"><img src="http://upload-images.jianshu.io/upload_images/1043191-04ef5acf94703f93.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></a></li>
+     </ul>
+     <a class="pre arrow" href="#"><</a>
+     <a class="next arrow" href="#">></a>
+     <ul class="bullet">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+       </ul>
+   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+// script部分
+    
+$(function(){
+  
+   var $window = $('window'),
+       $ct = $('.ct'),
+       $pre = $('.pre'),
+       $next = $('.next'),
+       $items = $ct.children(),
+       $bullet = $('.bullet'),
+       imgwd = $items.width(),
+       imgCount = $ct.children().size();
+    
+    //1.克隆 2.克隆后的真实图片个数 3.改变css
+    
+    //$ct.append($items.first().clone());
+ //   $ct.prepend($items.last().clone());
+ //   realCount = $ct.children().size();
+  //  $ct.css({left: -imgwd,width: realCount*imgwd})
+    
+    
+    var curIdx = 0;
+    var isAnimate = false; //状态锁
+    
+    //绑定事件
+    $next.on('click',function(){
+      playNext();
+      
+    });
+    $pre.on("click",function(){
+      playPre();
+      
+    });
+    
+    $bullet.find('li').on('click',function(){
+      var idx = $(this).index();
+      play(idx);
+      
+    })
+    
+    
+    
+    //自动播放
+
+      autoPlay();
+
+    //  function stopAuto(){
+    //clearInterval(clock);
+    //  }
+
+      function autoPlay(){
+       clock = setInterval(function(){
+          playNext();
+       }, 3000); 
+  }
+   
+       
+    
+    
+    //playnext()和playpre();
+    
+    
+    
+    
+    
+    
+   function playNext(){
+     play((curIdx+1)%imgCount)
+   }
+    
+    
+    
+    function playPre(){
+      play((imgCount+curIdx-1)%imgCount)
+    }
+  
+   
+   
+    function play(idx){
+      $items.eq(curIdx).fadeOut(500);
+        $items.eq(idx).fadeIn(300, function(){
+          isAnimate = false;
+        });
+      curIdx = idx;
+      setBullet();
+    }
+    
+    
+    
+    //设置bullet
+    
+    function setBullet(){
+      $bullet.find('li').removeClass('active')
+                        .eq(curIdx).addClass('active');
+    }
+    
+});
+
+
+
+
+ </script>
+</body>
+</html>

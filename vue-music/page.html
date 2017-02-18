@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="referrer" content="never">
+	<title>music app</title>
+	<script src="./iconfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		.icon {
+		   width: 1em; height: 1em;
+		   vertical-align: -0.15em;
+		   fill: currentColor;
+		   overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<article>
+			<aside class="ctrl">
+				<div>
+					<img v-bind:src="pic">
+					<section class="key" v-on:mouseup="moveOver">
+						<a href="javascript:void(0)" class="left" v-on:click="playOther">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-shangyishou"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="stop" v-on:click="stopSong" v-if="status">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-stop"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="start" v-on:click="playSong"  v-if="!status">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-start"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="right" v-on:click="playOther">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-xiayishou"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" v-if="!noVolume" v-on:click="toggleNoVolume">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-yinliang"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" v-if="noVolume" v-on:click="toggleNoVolume">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-ttpodicon"></use>
+							</svg>
+						</a>
+						<div class="volume" v-on:click="setVolume" v-on:mousedown="moveVolume">
+							<div class="nowvolume"></div>
+							<div class="volumepoint"></div>
+						</div>
+					</section>
+					<section class="process" v-on:mouseup="setOver">
+						<div class="progress" v-on:mousedown="setProgress" v-on:click="setWidth">
+							<div class="now"></div>
+							<div class="point"></div>
+						</div>
+						<span class="nowlength">{{ nowTime }}</span>
+						<span class="songlength">{{ endTime }}</span>
+					</section>
+					<div class="list"></div>
+				</div>
+			</aside>
+
+			<aside class="info">
+				<div class="song">
+					<p class="songname">{{ title }}</p>
+					<p class="artist">歌手：{{ artist }}</p>
+					<!-- <p class="lyric" v-for="lyric in arr">{{ lyric.lrc }}</p> -->
+					<ul class="lyric">
+						<div class="cover"></div>
+						<li  v-for="lyric in arr">{{ lyric.lrc }}</li>
+					</ul>
+				</div>
+			</aside>
+		</article>
+		<audio v-bind:src="url"></audio>
+	</div>
+
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
