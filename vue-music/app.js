@@ -60,7 +60,7 @@ var app = new Vue({
 				type: 'get',
 				url: 'http://api.jirengu.com/fm/getSong.php',
 				data: {
-					channel: 'channel=15'
+					channel: 'channel=4'
 				},
 				success: (responseText)=>{
 					var response = JSON.parse(responseText);
