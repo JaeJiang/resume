@@ -1,5 +1,4 @@
-import Vue from 'vue';
-
+import Vue from 'vue';  //引入
 var app = new Vue({
 	el: '#app',
 	data: {
