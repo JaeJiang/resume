@@ -16,53 +16,17 @@
 		a{
 			text-decoration: none;
 		}
-
 		.icon {
 		   width: 1em; height: 1em;
 		   vertical-align: -0.15em;
 		   fill: currentColor;
 		   overflow: hidden;
 		}
-
 		body{
 			overflow: hidden;
 			font-family: PingFangSC-Regular, "Microsoft YaHei",sans-serif;
 			background-color: #17af97;
 		}
-
-		.main{
-			width: 1200px;
-			margin: 0 auto;
-		}
-		.main>div{			
-			text-align: center;
-			/*position: relative;*/
-			display: table;
-			width: 100%;
-		}
-		.main>div>div{
-			/*position: absolute;
-			top: 50%;*/
-			display: table-cell;
-			vertical-align: middle;
-			width: 100%;
-		}
-		.main>ul{
-			position: fixed;
-			right: 50px;
-		}
-		.main>ul li{
-			padding: 10px 0;
-		}
-		.main>ul li>a{
-			color: #333;
-			border: 1px solid #eee;
-			border-radius: 50%;
-			width: 8px;
-			height: 8px;
-			display: block;
-		}
-
 		h3{
 			font-weight: 900;
 			color: #fff;
@@ -78,221 +42,216 @@
 			margin-left: 10px;
 			padding: 3px;
 		}
-/*		.main>div>div>p{
-			color: #ddd;
-			font-size: 40px;
-		}*/
+		#info{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
 		#info img{
-			width: 100px;
-			border-radius: 7%;
-			border: 4px solid #FAB646;
+		width: 100px;
+		border-radius: 7%;
+		border: 4px solid #FAB646;
 		}
-		#info h2{
-			color:#fff;
-		}
-		#info h3{
-			margin-top: 15px;
-			margin-bottom: 10px;
-			font-size: 30px;
+		#info{
 			color: #fff;
-			padding: 0;
 		}
-		#info p{
-			color: rgba(71, 0, 136, 0.48);
-			font-size: 25px;
-			margin-bottom: 10px;
-		}
-		#info a{
+		#info a {
 			color: #eee;
 			margin-right: 10px;
 			padding: 3px;
 			border-radius: 5px;
 			background-color: #37ddc4;
 		}
+		#info h3 {
+			margin-top: 15px;
+			margin-bottom: 10px;
+			font-size: 30px;
+			color: #fff;
+			padding: 0;
+		}
+		#info p {
+			color: rgba(71, 0, 136, 0.48);
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+		.handsome{
+			text-align: center;
+		}
 
-		.main>#project>div>ul{
-			width: 1200px;
-			margin: 0 auto;
+		#vue-prj{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-		.main>#project>div>ul:after{
-			content: '';
+		#vue-prj img{
+			width: 100%;
+			height: auto;
+			max-width: 100%;
 			display: block;
-			clear: both;
 		}
-		.main>#project>div>ul>li{
-			float: left;
-			width: 600px;
+		#vue-prj .ct1{
+			display: flex;
+			justify-content: center;
+		}
+		#vue-prj h3{
+			text-align: center;
+		}
+		#vue-prj .pic{
+			width:48%;
+			margin-right: 24px;
+		}
+		#vue-prj ul.describe h4{
+		/*float: left;*/
+		font-size: 25px;
+		color: #eee;
+		margin-bottom: 15px;
+		}
+		#vue-prj ul.describe p{
+		width: 450px;
+		line-height: 25px;
+		/*float: left;*/
+		font-size: 20px;
+		color: rgb(243,235,235);
+		}
+
+		#project>div>ul>li{
+			display: inline-block;
+
+			width: 49vw;
 			text-align: left;
 			margin-bottom: 40px;
 			height: 130px;
 		}
-		.main>#project>div>ul>li>a{
-			color: #fff;
-			font-size: 50px;
-			border-radius: 50%;
-			background-color: rgba(100,100,100,0.5);
-			padding: 15px;
-			display: block;
-			float: left;
-			width: 50px;
-			height: 50px;
-			margin: 0 50px;
-			line-height: 50px;
-		}
-		.main>#project>div>ul>li>h4>a{
-			font-size: 30px;
-			color: rgba(100,100,100,0.5);
-		}
-		.main>#project>div>ul>li>h4{
-			margin-top: 5px;
-			margin-bottom: 9px;
-		}
-		.main>#project>div>ul>li>p{
-			font-size: 20px;
+		#project>div>ul>li>p{
+			font-size: 16px;
 			color: rgb(158,218,207);
 			padding: 3px 0;
-			width: 415px;
-			float: right;
+		}
+		#project>div>ul>li>a{
+		color: #fff;
+		font-size: 50px;
+		border-radius: 50%;
+		background-color: rgba(100,100,100,0.5);
+		padding: 15px;
+		display: block;
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin: 16px 34px;
+		line-height: 50px;
+		}
+		#project h3{
+			text-align: center;
 		}
 
-		.main>#skills>div>ul>li>p.lan{
-			float: left;
-			line-height: 50px;
-			color: #fff;
-			font-size: 30px;
-			width: 200px;
-			text-align: left;
+		#skills>div>ul>li>p.lan{
+		float: left;
+		line-height: 50px;
+		color: #fff;
+		font-size: 30px;
+		width: 200px;
+		text-align: left;
 		}
-/*.main>#skills>div>ul>li>p.percent{
-	line-height: 50px;
-	color: #fff;
-	font-size: 30px;
-}*/
+		/*.main>#skills>div>ul>li>p.percent{
+		line-height: 50px;
+		color: #fff;
+		font-size: 30px;
+		}*/
 		.main>#skills>div>ul>li:after{
-			content: '';
-			display: block;
-			clear: both;
+		content: '';
+		display: block;
+		clear: both;
 		}
 		.main>#skills>div>ul>li{
-			width: 1100px;
-			margin: 0 auto;
-			margin-bottom: 20px;
+		width: 1100px;
+		margin: 0 auto;
+		margin-bottom: 20px;
 		}
+
 		.pannel-ct{
-			height: 50px;
-			width: 800px;
-			background-color: rgb(240, 236, 236);
-			margin: 0 auto;
-			float: left;
+		height: 50px;
+		width: 800px;
+		background-color: rgb(240, 236, 236);
+		margin: 0 auto;
+		float: left;
 		}
 		.pannel{
-			width: 600px;
-			height: 50px;
-			background-color: #333;
+		width: 600px;
+		height: 50px;
+		background-color: #333;
 		}
 		.html .pannel{
-			width: 680px;
+		width: 680px;
 		}
 		.css .pannel{
-			width: 640px;
+		width: 640px;
 		}
 		.js .pannel{
-			width: 590px;
+		width: 590px;
 		}
 		.jq .pannel{
-			width: 620px;
-		}
-		#history h4{
-			color: #333;
-			font-size: 40px;
-			margin: 20px 0;
-		}
-		#history div>div{
-			text-align: left;
-			max-width: 600px;
-			margin: 0 auto;
-		}
-		#history p{
-			font-size: 20px;
-			color: #ccc;
-			margin-bottom: 10px;
-		}
-		#history p.time{
-			font-size: 30px;
-			color: #eee;
-		}
-
-		.selected{
-			background-color: #333;
+		width: 620px;
 		}
 		.resume ul{
-			width: 300px;
-			/*border: 1px solid #333;*/
-			margin: 0 auto;
-			margin-bottom: 50px;
+		width: 300px;
+		/*border: 1px solid #333;*/
+		margin: 0 auto;
+		margin-bottom: 50px;
 		}
 		.resume ul>li{
-			display: inline-block;
-			background-color: #37ddc4;
-			padding: 5px;
-			margin-bottom: 5px;
-			border-radius: 5px;
-			cursor: pointer;
-			color: #fff;
+		display: inline-block;
+		background-color: #37ddc4;
+		padding: 5px;
+		margin-bottom: 5px;
+		border-radius: 5px;
+		cursor: pointer;
+		color: #fff;
 		}
 		.resume ol>li{
-			text-align: left;
-			width: 800px;
-			margin: 0 auto;
-			color: #fff;
-			font-size: 20px;
-			margin-bottom: 10px;
+		text-align: left;
+		width: 800px;
+		margin: 0 auto;
+		color: #fff;
+		font-size: 20px;
+		margin-bottom: 10px;
 		}
-
-		#vue-prj div.pic{
-			text-align: right;
-			float: left;
-			width: 50%;
+		.main>#project>div>ul>li>h4>a{
+		font-size: 30px;
+		color: rgba(100,100,100,0.5);
 		}
-		#vue-prj img{
-			width: 500px;
-			margin-right: 100px;
+		.main>#project>div>ul>li>h4{
+		margin-top: 5px;
+		margin-bottom: 9px;
 		}
-		#vue-prj ul.describe{
-			text-align: left;
-			float: left;
-			width: 50%;
+		.main>ul{
+		position: fixed;
+		right: 50px;
 		}
-		#vue-prj ul.describe>li{
-			margin-bottom: 20px;
+		.main>ul li{
+		padding: 10px 0;
 		}
-		#vue-prj ul.describe>li:after{
-			content: '';
-			display: block;
-			clear: both;
+		.main>ul li>a{
+		color: #333;
+		border: 1px solid #eee;
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		display: block;
 		}
-		#vue-prj ul.describe h4{
-			float: left;
-			font-size: 25px;
-			color: #eee;
-			margin-bottom: 15px;
-		}
-		#vue-prj ul.describe p{
-			width: 450px;
-			line-height: 25px;
-			float: left;
-			font-size: 20px;
-			color: rgb(243,235,235);
+		.selected{
+		background-color: #333;
 		}
 	</style>
 </head>
 <body>
 	<div class="main">
 		<div id="info">
-			<div>
+			<div class="handsome">
 				<img src="demo.jpg">
 				<h3>姜杭轩</h3>
 				<h2>前端工程师</h2>
+				<h2 style="font-size: 20px">1994.1.7 生人</h2>
 				<!-- <p>期望薪资：10k</p> -->
 				<p>jianghangxuan@foxmail.com</p>
 				<p>Wechart/Phone:18817818001</p>
@@ -303,49 +262,62 @@
 		<!--todos应用-->
 		<div id="vue-prj">
 			<div style="padding-right:50px;">
-				<h3>基于 Vue 的音乐播放器<a href="http://couzin_gu.coding.me/Demo/vue-music/page.html" target="_blank">预览</a></h3>
-				<div class="pic"><img src="work-1.png"></div>
-				<ul class="describe">
-					<li>
-						<h4>使用技术： </h4>
-						<p>Vue、 Webpack、 JavaScript、 AJAX、 HTML5</p>
-					</li>
-					<li>
-						<h4>项目描述：</h4>
-						<p>可以进行歌曲的暂停与播放，对歌曲的播放进度进行调节，并对歌词进行同步。播放上一首或者下一首时，获取的都是随机歌曲。可以进行音量的控制，满足一个基本的音乐播放器的功能。</p>
-					</li>
-					<li>
-						<h4>实现细节： </h4>
-						<p>通过 HTML5 的 audio 标签，可以将音频嵌入到 HTML 中，并通过该标签提供的一些属性和方法，可以实现开始、暂停以及对音量进行调节等功能。歌词同步可以根据当前播放的进度与歌词的时间戳来实现。将歌词放入数组中，通过 vue 的 v-for 将数组中的内容渲染到页面上，需要改变页面上的歌词时，只需要将数组的内容改变即可。</p>
-					</li>					
-				</ul>
+				<h3>基于 Vue 的音乐播放器<a href="http://couzin_gu.coding.me/Demo/vue-music/page.html" target="_blank">预览</a><a href="https://github.com/JaeJiang/resume/tree/master/music-vue" target="_blank">源码</a></h3>
+				<div class="ct1">
+					<div class="pic">
+						<img src="work-1.png">
+					</div>
+					<div>
+						<ul class="describe">
+							<li>
+								<h4>使用技术： </h4>
+								<p>Vue、 Webpack、 JavaScript、 AJAX、 HTML5</p>
+							</li>
+							<li>
+								<h4>项目描述：</h4>
+								<p>可以进行歌曲的暂停与播放，对歌曲的播放进度进行调节，并对歌词进行同步。播放上一首或者下一首时，获取的都是随机歌曲。可以进行音量的控制，满足一个基本的音乐播放器的功能。</p>
+							</li>
+							<li>
+								<h4>实现细节： </h4>
+								<p>通过 HTML5 的 audio 标签，可以将音频嵌入到 HTML 中，并通过该标签提供的一些属性和方法，可以实现开始、暂停以及对音量进行调节等功能。歌词同步可以根据当前播放的进度与歌词的时间戳来实现。将歌词放入数组中，通过 vue 的 v-for 将数组中的内容渲染到页面上，需要改变页面上的歌词时，只需要将数组的内容改变即可。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
 		</div>
 		<!--vue音乐-->
 		<div id="vue-prj">
 			<div>
-				<h3>基于 Vue 的Todo小应用<a href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank">预览</a></h3>
-				<div class="pic"><img src="work-2.png"></div>
-				<ul class="describe">
-					<li>
-						<h4>使用技术： </h4>
-						<p>Vue、 Webpack、 JavaScript、 LeanCloud（准备以这个再加个登录功能,储存数据）</p>
-					</li>
-					<li>
-						<h4>项目描述：</h4>
-						<p>进入页面是个简洁的输入框,输入计划想做的事,回车后就push到下面形成列表。</p>
-					</li>
-					<li>
-						<h4>实现细节： </h4>
-						<p>通过一些基础的vue操作,绑定数据,绑定事件等 来实现这样的小功能</p>
-					</li>					
-				</ul>
+				<h3>基于 Vue 的Todo小应用<a href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank">预览</a><a href="https://github.com/JaeJiang/vue-project/tree/master/step-3" target="_blank">源码</a></h3>
+				<div class="ct1">
+					<div class="pic">
+						<img src="work-2.png">
+					</div>
+					<div>
+						<ul class="describe">
+						<li>
+							<h4>使用技术： </h4>
+							<p>Vue、 Webpack、 JavaScript、 LeanCloud（准备以这个再加个登录功能,储存数据）</p>
+						</li>
+						<li>
+							<h4>项目描述：</h4>
+							<p>进入页面是个简洁的输入框,输入计划想做的事,回车后就push到下面形成列表。</p>
+						</li>
+						<li>
+							<h4>实现细节： </h4>
+							<p>通过一些基础的vue操作,绑定数据,绑定事件等 来实现这样的小功能</p>
+						</li>
+					</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="project">
 			<div>
 				<h3>项目经验</h3>
-				<ul>
+				<ul class="items">
 					<li>
 						<a href="https://jaejiang.github.io/resume/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E4%BB%BF%E7%AB%99/"  target="_blank">
 							<svg class="icon" aria-hidden="true">
@@ -414,7 +386,7 @@
 		
 		<div id="skills">
 			<div>
-				<h3>擅长技术</h3>
+				<h3 style="text-align: center">擅长技术</h3>
 				<ul>
 					<li class="html">
 						<p class="lan">HTML</p>
