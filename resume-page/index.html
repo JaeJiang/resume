@@ -117,11 +117,11 @@
 
 		#project>div>ul>li{
 			display: inline-block;
-
 			width: 49vw;
 			text-align: left;
 			margin-bottom: 40px;
 			height: 130px;
+			padding-left: 10px;
 		}
 		#project>div>ul>li>p{
 			font-size: 16px;
@@ -193,6 +193,12 @@
 		.jq .pannel{
 		width: 620px;
 		}
+		.Vue .pannel{
+			width: 350px;
+		}
+		.React .pannel{
+			width: 220px;
+		}
 		.resume ul{
 		width: 300px;
 		/*border: 1px solid #333;*/
@@ -257,6 +263,7 @@
 				<p>Wechart/Phone:18817818001</p>
 				<a href="https://github.com/JaeJiang" target="_blank">Github</a>
 				<a href="http://www.jianshu.com/u/3ecbe81ebc23" target="_blank">博客</a>
+				<a href="#" target="_blank">简历PDF</a>
 			</div>
 		</div>
 		<!--todos应用-->
@@ -315,7 +322,7 @@
 			</div>
 		</div>
 		<div id="project">
-			<div>
+			<div >
 				<h3>项目经验</h3>
 				<ul class="items">
 					<li>
@@ -383,7 +390,7 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<div id="skills">
 			<div>
 				<h3 style="text-align: center">擅长技术</h3>
@@ -408,6 +415,18 @@
 					</li>
 					<li class="jq">
 						<p class="lan">jQuery</p>
+						<div class="pannel-ct">
+							<div class="pannel"></div>
+						</div>
+					</li>
+					<li class="Vue">
+						<p class="lan">Vue</p>
+						<div class="pannel-ct">
+							<div class="pannel"></div>
+						</div>
+					</li>
+					<li class="React">
+						<p class="lan">React</p>
 						<div class="pannel-ct">
 							<div class="pannel"></div>
 						</div>
@@ -439,9 +458,9 @@
 					<li>了解 HTML5、 CSS3，有实现简单效果的经验。</li>
 					<li>乐于通过各个渠道了解行业新技术，阅读各类中英文文档</li>
 				</ol>
-			</div>  
+			</div>
 		</div>
-		
+
 
 		<ul class="mark">
 			<li><a href="javascript:void(0)" class="selected"></a></li>
@@ -462,14 +481,14 @@
 			var winH = $(window).height();
 
 			setSize();
-			function setSize(){				
+			function setSize(){
 				$('.main>div').height(winH);
 				$('.mark').css({
 					'top': winH / 2 - $('.mark').height() / 2
 				});
 			}
 
-			
+
 
 			function setSelected(){
 				$('.selected').removeClass('selected')
@@ -489,7 +508,7 @@
 						e.preventDefault();
 						return ;
 					}
-					
+
 					var wheelDir = (e.originalEvent.deltaY > 0) ? "down" : "up";
 					if((wheelDir === 'down' && curIndex === 6) || (wheelDir === 'up' && curIndex === 0)){
 						return ;
@@ -497,7 +516,7 @@
 					isWheeling = true;
 					curIndex = (wheelDir === 'down') ? (curIndex + 1) : (curIndex - 1);
 					setSelected();
-					
+
 				});
 				$('.mark').on('click','a',function(e){
 					curIndex = $(this).parent().index();
@@ -513,7 +532,7 @@
 			};
 
 		})();
-		
+
 		fullPage.bindEvent();
 	</script>
 </body>
