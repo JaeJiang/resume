@@ -103,7 +103,7 @@ var app = new Vue({
 			// var sid = this.sid;
 			var opts = {
 				type: 'post',
-				url: 'http://api.jirengu.com/fm/getLyric.php',
+				url: 'http://api.jirengu.com/fm/getSong.php',
 				data: {
 					sid: this.sid
 				},
