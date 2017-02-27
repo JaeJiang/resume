@@ -7,23 +7,29 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <style>
     body{
-      background-color: plum;
+      background-color: #62D5CF;
     }
     .ui-date-picker {
-      position: absolute;
-      
+      position: relative;
+      top: 100px;
+      left: 86px;
       width: 240px;
       border: 1px solid #ccc;
+      border-radius: 3px;
       font-size: 14px;
-      font-family: serif, cursive, fantasy
+      /*font-family: sans-serif, cursive, fantasy*/
     }
-
+    input:focus {
+      outline:none;
+    }
     .ui-date-picker > .header {
       height: 30px;
       line-height: 30px;
       text-align: center;
-      background-color: #a0a5dd;
+      background-color: #86463D;
       color: #fff;
+      font-size:22px;
+      border-radius: 14px 14px 0 0;
     }
 
     .ui-date-picker .caret-left {
@@ -56,6 +62,7 @@
       width: 100%;
       text-align: center;
       background-color: #fff;
+      box-shadow: 5px 5px 10px grey;
     }
 
     .ui-date-picker .panel th {
@@ -85,11 +92,22 @@
     }
     .calendar{
       position: absolute;     /* 相对定位或绝对定位均可 */
-    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: pink;
+      top: 34%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*background-color: pink;*/
+    }
+    .date-ipt {
+      width: 30vw;
+      height: 30px;
+      border: 8px solid #FCD14E;
+      border-radius: 30px;
+      font-size: x-large;
+      padding-left: 20px;
+    }
+    .panel{
+      font-size: 18px;
+      /*font-family: sans-serif;*/
     }
   </style>
 </head>
