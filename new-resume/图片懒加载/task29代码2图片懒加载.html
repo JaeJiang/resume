@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>任务29 代码2 懒加载</title>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+  <style>
+    ul,li{
+      list-style:none;
+    }
+    .container {
+      width: 690px;
+      margin: 0 auto;
+    }
+    .container li{
+      float: left;
+      margin: 15px 15px;
+    }
+    .container li img{
+      width: 200px;
+      height: 355px;
+      
+    }
+    
+  </style>
+</head>
+<body>
+  <ul class="container">
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+    <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://t1.qpic.cn/mblogpic/5785e8fe835dc7cd27fa/2000" alt=""></a></li>
+  </ul>
+  <script type="text/javascript">
+    $(window).on('scroll',function(){
+      check();
+    });
+    
+    check();
+    
+    function check(){
+      $('.container img').each(function(){
+        var $cur = $(this);
+        
+        if($cur.attr('isLoading')){
+          return;
+        }
+        
+        if(isShow($cur)){
+          setTimeout(function(){
+            showImg($cur);
+          },300)
+          
+        }
+      });
+    }
+    
+    
+    function isShow($el){
+      var scrollH = $(window).scrollTop(),
+      winH = $(window).height(),
+      top = $el.offset().top;
+      
+      if(top < winH + scrollH){
+        return true;
+        
+      }else{
+        return false;
+      }
+    }
+    
+    function showImg($el){
+      $el.attr('src',$el.attr('data-src'));
+      $el.attr('isLoading',true);
+    }
+    
+    
+    
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

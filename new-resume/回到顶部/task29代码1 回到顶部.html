@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>task28代码1</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style>
+    .ct{
+      height: 450px;
+      background-color: #E6CCB1;
+      padding: 30px;
+      border: 1px solid #FC4766;
+    }
+    .gotop{
+      position: fixed;
+      bottom:50px;
+      right:30px;
+      border: 1px solid pink;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius:60px ;
+      background: #fff;
+      font-size: 30px;
+      color: #F76472;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="ct">内容1</div>
+  <div class="ct">内容2</div>
+  <div class="ct">内容3</div>
+  <div class="ct">内容4</div>
+  <div class="ct">内容5</div>
+  
+  
+  
+  <script>
+    
+    var $gotop = $('<div class="gotop">▲</div>')
+    $('body').append($gotop);
+
+    $(window).on('scroll',function(e){
+      var scrollTop = $('body').scrollTop();
+      console.log(scrollTop);
+      if(scrollTop > 400){
+        $gotop.show();
+      }else{
+        $gotop.hide();
+      }
+    })
+    $gotop.on('click',function(){
+      $(window).scrollTop(0);
+    })
+  </script>
+</body>
+</html>
