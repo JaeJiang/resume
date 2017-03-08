@@ -12,8 +12,9 @@
         style.innerHTML = content
         document.head.appendChild(style)
     </script>
-    <style type="text/css">
-        *{
+<style type="text/css">
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,6 +23,9 @@
     font: 1rem/150% Arial,'微软雅黑',"\5b8b\4f53";
     -webkit-font-smoothing: antialiased;
 }
+ul,li {
+            list-style: none;
+        }
 .clearfix:after{
     content: '';
     display: block;
@@ -52,7 +56,7 @@
     /*box-shadow: 10px 0 10px #888;*/
 }
 .name{
-    color: #FCD14E;
+    color: #0078FF;
 }
 aside .headimg{
     display: inline-block;
@@ -110,7 +114,7 @@ aside .aboutme{
     width: 5.5rem;
     text-align: right;
     margin-right: 1rem;
-    color: #FCD14E;
+    #0078FF;
 }
 .skillbar .basebar{
     display: inline-block;
@@ -143,7 +147,7 @@ aside .connectme{
     /*color: #252525;*/
 }
 .connectme span{
-    color: #FCD14E;
+    #0078FF;
 }
 .wrapper article{
     width: 40rem;
@@ -152,6 +156,7 @@ aside .connectme{
     margin-top: -1.5rem;
     float: left;
     background: #ccc;
+    padding-right:94px;
 }
 article h3{
     font-size: 2rem;
@@ -160,7 +165,7 @@ article h3{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-family: SimHei;
-    color: #FCD14E;
+    color: #0078FF;
     font-weight: bolder;
 }
 .skill h4{
@@ -171,7 +176,9 @@ article h3{
     list-style: initial;
     margin-left: 1rem;
     color: #787878;
+    font-size: 14px;
 }
+
 article .project .item a{
     color: #202021;
     text-decoration: underline;
@@ -204,8 +211,18 @@ article .expect div{
 }
 .page{
     position: relative;
-    top: 76px;
+    top: 62px;
     
+}
+
+.mail span{
+    color: #6984B6;
+}
+.blog span{
+    color: #D8CAB8;
+}
+.github span{
+    color: #73D8F7;
 }
     </style>
 
@@ -328,26 +345,40 @@ article .expect div{
                 <h3>关于个人</h3>
                 <h4>能力技能</h4>
                 <ul class="skilldetail">
-                    <li>熟悉使用PhotoShop切图，像素级重构，可准确还原设计</li>
-                    <li>熟悉HTML、CSS、页面架构和布局，对Web标准和标签语义化有深入理解</li>
-                    <li>熟悉Ajax、JavaScript、jQuery、JSON等前端技术，掌握面向对象编程思想</li>
-                    <li>了解ECMA5的标签规范以及HTML5新标签及CSS3样式及动画</li>
+                    <li>1.熟悉使用PhotoShop切图，像素级重构，可准确还原设计</li>
+                    <li>2.熟悉HTML、CSS、页面架构和布局，对Web标准和标签语义化有深入理解</li>
+                    <li>3.熟悉Ajax、JavaScript、jQuery、JSON等前端技术，掌握面向对象编程思想</li>
+                    <li>4.了解ECMA5的标签规范以及HTML5新标签及CSS3样式及动画</li>
+                    <li>5.了解node.js并在继续学习中，熟悉并会运用Vue框架,Webpack的基础功能，还在继续学习中</li>
+                    <li>6.在工作和项目的积累中，渐渐了解PhotoShop的使用，熟练掌握切图技能，根据psd稿按要求按质量的完成html切图，解决对大部分主流浏览器的兼容问题。</li>
+                    <li>7.熟练掌握JavaScript，运用jQuery库，了解AJAX、JSONP等，能与后端程序员配合完成动态页面开发。会自己编写小插件，熟练CSS属性，对盒模型，定位，浮动等理解深刻并会运用.</li>
+                    <li>8.了解CSS 3常用属性，如动画，阴影，过渡,2D及3D转换等等，可以完成各种特效，熟悉HTML 5的相关新特性，了解响应式布局及媒体查询，并可用来制作响应式页面，对html的各类标签及css属性的运用很熟练</li>
+                    <li>9.性格开朗，喜欢运动，爱编程，爱前端，喜欢编写小插件，研究新知识.</li>
+                    <li>10.在工作和学习中碰到大部分问题能够独立自主靠搜索引擎解决，希望找到一份前端工程师的工作，加入一个热情洋溢的团队，提高自己的能力和技术，使自己成长的同时，能更好的为这个团队服务。</li>
                     <!-- <li>了解产出兼容于目前主流浏览器的前端页面</li> -->
                 </ul>
-                <h4>遇到问题，解决问题</h4>
-                <ul class="skilldetail2">
-                    <li>去年的时候，逛到了阮一峰老师的博客，知道了webpack这个前端资源模块化管理打包工具，我觉得我应该学习学习应用到实际场景中</li>
-                    <li>依靠在知乎上学习一位大牛学新东西的套路：[copy - run - modify]</li>
-                    <li>1.抄文档给的例子</li>
-                    <li>2.在自己这里运行成功</li>
-                    <li>3.改一下，看还能不能运行成功。所以学 Webpack我也也遵循同样的套路。</li>
-                    <li>后来经过一段时间的google，出错，修改，运行~直到成功在本地配置了webpack进行编程。</li>
-</p>
-                </ul>
+                <!--<h4>遇到问题，解决问题</h4>-->
+                <!--<ul class="skilldetail2">-->
+                    <!--<li>去年的时候，逛到了阮一峰老师的博客，知道了webpack这个前端资源模块化管理打包工具，我觉得我应该学习学习应用到实际场景中</li>-->
+                    <!--<li>依靠在知乎上学习一位大牛学新东西的套路：[copy - run - modify]</li>-->
+                    <!--<li>1.抄文档给的例子</li>-->
+                    <!--<li>2.在自己这里运行成功</li>-->
+                    <!--<li>3.改一下，看还能不能运行成功。所以学 Webpack我也也遵循同样的套路。</li>-->
+                    <!--<li>后来经过一段时间的google，出错，修改，运行~直到成功在本地配置了webpack进行编程。</li>-->
+<!--</p>-->
+                <!--</ul>-->
             </div>
             <div class="project">
                 <h3>项目经历</h3>
                 <ul class="projectitem">
+                    <li>
+                        <div class="item">
+                            <img src="http://i1.piimg.com/567571/133e6c6bf6d3ccaf.png" alt="">
+                            <a href="https://github.com/JaeJiang/vue-project" target="_blank">在线简历制作工具</a>
+                            <div>功能可以实现:添加简历内容，包括个人信息、工作经历、学习经历、获奖情况、项目经历和联系方式
+                                。更新简历内容,选择简历,模板预览简历,发布简历.使用技术：Vue.js、vue-cli、Vuex、LeanCloud</div>
+                        </div>
+                    </li>
                     <li>
                         <div class="item">
                             <img src="http://p1.bqimg.com/567571/4e2f52b19b19ae9f.png" alt="">
@@ -358,8 +389,8 @@ article .expect div{
                     <li>
                         <div class="item">
                             <img src="http://i1.piimg.com/567571/9446de046b81d410.png" alt="">
-                            <a href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank">Todo小应用</a>
-                            <div>简介：基于 Vue 的Todo小应用 主要运用技术：Vue、Webpack、JavaScript、LeanCloud（准备以这个再加个登录功能,储存数据）</div>
+                            <a href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank">Vue在线日程表</a>
+                            <div>简介：基于 Vue 的Todolist 主要运用技术：Vue、Webpack、JavaScript、LeanCloud（准备以这个再加个登录功能,储存数据）</div>
                         </div>
                     </li>
                     <li>
@@ -383,13 +414,13 @@ article .expect div{
                             <div>简介：全屏无限轮播图 主要运用技术：HTML5、CSS、 jQuery实现全屏无限轮播功能。</div>
                         </div>
                     </li>
-                    <li>
-                        <div class="item">
-                            <img src="http://p1.bqimg.com/567571/b18d83f58867c1f9.png" alt="">
-                            <a href="https://jaejiang.github.io/resume/css3/3d-carousel" target="_blank">3D旋转木马效果</a>
-                            <div>简介：3D旋转木马 主要运用技术：CSS3 3D.transform 展示“旋转木马”效果。</div>
-                        </div>
-                    </li>
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<img src="http://p1.bqimg.com/567571/b18d83f58867c1f9.png" alt="">-->
+                            <!--<a href="https://jaejiang.github.io/resume/css3/3d-carousel" target="_blank">3D旋转木马效果</a>-->
+                            <!--<div>简介：3D旋转木马 主要运用技术：CSS3 3D.transform 展示“旋转木马”效果。</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
                     <li>
                         <div class="item">
                             <img src="http://i1.piimg.com/567571/55fa5ded8e116b11.png" alt="">
@@ -429,7 +460,7 @@ article .expect div{
                 <h3>新工作期望</h3>
                 <div>希望加入一个以技术为驱动的互联网公司，从事前端开发工作，并且可以提升大型项目的驾驭能力，希望新工作有成长空间，技术上有挑战性，技术氛围够Geek，使人有成就感</div>
             </div> -->
-            <p class="page" style="text-align:center"><a href="https://jaejiang.github.io/resume/resume-page/index" style="text-decoration: underline;color:#FCD14E;font-size:1.3rem" target="_blank">个人在线简历</a></p>
+            <p class="page" style="text-align:center"><a href="https://jaejiang.github.io/resume/resume-page/index" style="text-decoration: underline;color:#0078FF;font-size:1.3rem" target="_blank">个人在线简历</a></p>
         </article>
     </div>
 </body>
