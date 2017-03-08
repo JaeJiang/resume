@@ -84,7 +84,10 @@
     }
     .pic3{
         /*float: left;*/
+        transition: all 2s;
         text-align: left;
+        position: relative;
+        left: -350px;
 
     }
     .myself{
@@ -298,13 +301,17 @@
         position: absolute;
         left:22px
     }
-
+    .top-name .goto{
+        transition:all 1.5s;
+        position: relative;
+        left: -80vw;
+    }
 </style>
 <body>
     <header>
         <div class="top">
             <div class="top-ct">
-                <ul>
+                <ul class="top-name">
                     <li><h1 class="orange">姜杭轩</h1></li>
                     <li><h3>前端工程师</h3></li>
                     <li><a href="javascript:void(0)" class="goto"><h6>  SEE WORKS<i class="iconfont icon-right"></i></h6></a></li>
@@ -423,6 +430,19 @@
         $goto.on('click',function(){
             $(window).scrollTop(774);
         })
+
+        $('.detail').on('mouseenter', function () {
+            $(this).find('.pic3').css(
+                "left","0"
+            )
+        })
+        $('body').on('mouseenter', function () {
+            $(this).find('.top .top-name .goto').css(
+                    "left","0"
+            )
+        })
+//
+
     </script>
 </body>
 </html>
