@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11b8639e-1d10-4d51-a0e7-df5b29baf087" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume-page/index.html" afterPath="$PROJECT_DIR$/resume-page/index.html" />
-    </list>
+    <list default="true" id="11b8639e-1d10-4d51-a0e7-df5b29baf087" name="Default" comment="" />
     <ignored path="resume.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
