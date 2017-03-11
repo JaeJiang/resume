@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11b8639e-1d10-4d51-a0e7-df5b29baf087" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/今日头条/index.html" afterPath="$PROJECT_DIR$/今日头条/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/今日头条/main.js" afterPath="$PROJECT_DIR$/今日头条/main.js" />
     </list>
     <ignored path="resume.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,16 +23,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/今日头条/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3892857">
+            <state vertical-scroll-proportion="-8.384615">
               <caret line="157" column="97" selection-start-line="157" selection-start-column="97" selection-end-line="157" selection-end-column="97" />
               <folding>
                 <element signature="n#div#0;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/今日头条/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6450512">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,8 +70,8 @@
         <option value="$PROJECT_DIR$/resume-page/css/style.css" />
         <option value="$PROJECT_DIR$/resume-page/index.html" />
         <option value="$PROJECT_DIR$/今日头条/style.css" />
-        <option value="$PROJECT_DIR$/今日头条/main.js" />
         <option value="$PROJECT_DIR$/今日头条/index.html" />
+        <option value="$PROJECT_DIR$/今日头条/main.js" />
       </list>
     </option>
   </component>
@@ -425,14 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/今日头条/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7674417">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/今日头条/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6622889">
@@ -443,13 +445,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/今日头条/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3892857">
+        <state vertical-scroll-proportion="-8.384615">
           <caret line="157" column="97" selection-start-line="157" selection-start-column="97" selection-end-line="157" selection-end-column="97" />
           <folding>
             <element signature="n#div#0;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#2;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/今日头条/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6450512">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

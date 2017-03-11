@@ -18,19 +18,22 @@ $(function(){
 
         }else{
             $curClone.hide();
+            $cur.css('visibility','initial');
+            $cur.show();
         }
     })
 
     function setFix(){
         $curClone.css({
             'position': 'fixed',
-            'top': 0,
+            'top': '15px',
             'left': offL,
             'width': curW,
             'margin': 0,
             'z-index': 9999
         });
         $curClone.show();
+        $cur.css('visibility','hidden')
 
     }
 
