@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+  <meta charset="UTF-8">
+  <title>task28代码</title>
+  <style>
+      
+    #header{          
+        background-color: #CDB677;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+     }
+      .nav{
+        background-color: #A2EFE6;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-top: 5px;
+        border-radius:8px;
+        
+      }
+      .aside{
+        float: left;
+        width: 150px;
+        min-height: 700px;
+        background-color: #FAB646;
+        padding-left: 10px;
+        margin-top: 10px;
+      }
+      .main{
+        overflow: auto;
+        background: #E6CCB1;
+        min-height: 700px;
+        padding-left: 15px;
+        margin-top: 10px;
+      }
+      
+  </style>
+</head>
+<body>
+  <div id="header">header</div>
+  
+  <div id="content">
+        <div class="nav">nav1</div>
+    <div class="aside">aside</div>
+    <div class="main">main</div>
+  </div>
+    
+    <div id="content">
+        <div class="nav">nav2</div>
+    <div class="aside">aside</div>
+    <div class="main">main</div>
+  </div>
+    
+    <div id="content">
+        <div class="nav">nav3</div>
+    <div class="aside">aside</div>
+    <div class="main">main</div>
+  </div>
+    
+    <div id="content">
+        <div class="nav">nav4</div>
+    <div class="aside">aside</div>
+    <div class="main">main</div>
+  </div>
+  
+  <div id="footer"></div>
+  <script>
+    
+    
+$('.nav').each(function(){
+
+  var $cur = $(this),
+      curH = $cur.height(),
+      curW = $cur.width(),
+      offsetTop = $cur.offset().top,
+      offsetLeft = $cur.offset().left;
+  
+  
+  
+  var $curClone = $cur.clone()
+              .css({visibility: 'hidden', display: 'none'})
+              .insertBefore($cur);
+
+  
+  $(window).on('scroll', function(){
+    var scrollTop = $(this).scrollTop();
+
+    if(scrollTop >= offsetTop ){
+      if(!isFixed()){
+        setFixed();
+      }
+    }else{
+      if(isFixed()){
+        unsetFixed();
+      }
+    }
+  });
+
+   function isFixed(){
+     return $cur.data('data-fixed');
+   }
+
+   function setFixed(){
+     $cur.data('data-fixed', true)
+         .css({
+               'position': 'fixed',
+               'top': 0,
+               'left': offsetLeft,
+               'width': curW,
+               'margin': 0,
+               'z-index': 9999
+             });
+     $curClone.show();
+
+   }
+   function unsetFixed(){
+     $cur.data('data-fixed', false)
+         .removeAttr('style');
+     $curClone.hide();
+   }
+
+})
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

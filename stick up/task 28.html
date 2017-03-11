@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+  <meta charset="UTF-8">
+  <title>task28代码</title>
+  <style>
+      
+    #header{          
+        background-color: #CDB677;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+     }
+      #nav{
+        background-color: #96D4D2;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-top: 5px;
+        border-radius:8px;
+        
+      }
+      .aside{
+        float: left;
+        width: 150px;
+        min-height: 1000px;
+        background-color: #FAB646;
+        padding-left: 10px;
+      }
+      .main{
+        overflow: auto;
+        background: #D85A63;
+        min-height: 700px;
+        margin-top: 8px;
+        padding-left: 15px;
+      }
+      
+  </style>
+</head>
+<body>
+  <div id="header">header</div>
+  <div id="nav">nav</div>
+  <div id="content">
+    <div class="aside">aside</div>
+    <div class="main">main</div>
+  </div>
+  <div id="footer"></div>
+  <script>
+    //获取 目标 height， width，offsettop.left
+    var $cur = $('#nav'),
+        curH = $cur.height(),
+        curW = $cur.width(),
+        offT = $cur.offset().top,
+        offL = $cur.offset().left;
+    
+    //克隆元素 并先设置隐藏该元素 
+    var $curClone = $cur.clone()
+                  .css({ display: 'none'})
+                  .insertBefore($cur);
+    
+    //监听窗口滚动高度 如果滚动高度大于或等于 设置fix
+    $(window).on('scroll',function(){
+      var scrollTop = $(this).scrollTop();
+      
+      if(scrollTop >= offT){
+        setFix();
+        
+      }else{
+        $curClone.hide();
+      }
+    })
+      
+      function setFix(){
+        $curClone.css({
+               'position': 'fixed', 
+               'top': 0, 
+               'left': offL,
+               'width': curW, 
+               'margin': 0,
+               'z-index': 9999
+             });
+     $curClone.show();
+     
+      }
+
+
+//组件
+
+
+// $.fn.stick =function(handler){
+
+//   var $cur = this,
+//       curH = $cur.height(),
+//       curW = $cur.width(),
+//       offsetTop = $cur.offset().top,
+//       offsetLeft = $cur.offset().left;
+//       onChange = hander ||function(){};
+   
+//   //把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 
+  
+//   var $div = $cur.clone()
+//               .css('opacity'，0)
+//               .insertBefore($cur)
+//               。hide();
+   
+//   $(window).on('scroll', function(){
+//     var scrollTop = $(this).scrollTop();
+
+//     if(scrollTop >= offsetTop ){
+//       if(!isFixed()){
+//         setFixed();
+//         onChange.call($cur);
+//       }
+//     }else{
+//       if(isFixed()){
+//         unsetFixed();
+//       }
+//     }
+//   });
+  
+//    function isFixed(){
+//      return !!$cur.data('data-fixed');
+//    }
+   
+//    function setFixed(){
+//      $cur.attr('data-fixed', true)
+//          .css({
+//                'position': 'fixed', 
+//                'top': 0, 
+//                'left': offsetLeft,
+//                'width': curW, 
+//                'margin': 0,
+//                'z-index': 9999
+//              });
+//      $div.show();
+     
+//    }
+//    function unsetFixed(){
+//      $cur.removeAttr('data-fixed')
+//          .removeAttr('style');
+//      $div.hide();
+//    };
+   
+
+   //$('.nav').stick();
+
+
+// };
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
