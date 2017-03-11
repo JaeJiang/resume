@@ -1,5 +1,5 @@
 $(function(){
-console.log(1);
+
     var $cur = $('.left'),
         curH = $cur.height(),
         curW = $cur.width(),
@@ -73,11 +73,7 @@ console.log(1);
         play(idx);
 
     });
-
-
-
     //自动播放
-
     autoPlay();
 
     //  function stopAuto(){
@@ -92,8 +88,6 @@ console.log(1);
     function playNext(){
         play((curIdx+1)%imgCount)
     }
-
-
     function play(idx){
         $items.eq(curIdx).fadeOut(500);
         $items.eq(idx).fadeIn(300, function(){
@@ -103,8 +97,6 @@ console.log(1);
         setBullet();
     }
 
-
-
     //设置bullet
 
     function setBullet(){
@@ -112,9 +104,14 @@ console.log(1);
             .eq(curIdx).addClass('active');
     }
 
+    //console.log(1);
 
+    //不感兴趣按钮
+    $(".center-item .source button").on('click',function(){
 
-
+        $(this).parents(".center-item").css("display","none");
+        console.log(1);
+    })
 
 
 });

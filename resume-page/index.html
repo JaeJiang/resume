@@ -7,307 +7,9 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1, minimum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_dfhrv20vcimdvx6r.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    body, ul, li, h1, h2, h3, h4, h5, h6, p ,a{
-        padding: 0;
-        margin: 0;
-        font-family: "sans-serif";
-        /*background-color: #FEFFFF;*/
-        color: #5C6468;
-    }
-    html, body {
-        height: 100%;
-    }
-    ul,li {
-        list-style: none;
-    }
-    a {
-        /*color: #5C6468;*/
-        text-decoration: none;
-    }
-    .green{
-        color: #4BCA64;
-        display: inline;
-    }
-    .orange{
-        color: #FA4E39;
-        display: inline-block;
-    }
-    .detail-head h1{
-        display: inline;
-    }
-    header .top {
-        background: url('http://p1.bpimg.com/567571/b3faed92eed98f02.jpg')  no-repeat  center;
-        background-size: cover;
-        height: 85vh;
-        display:flex;
-        /*align-items:center;!*垂直居中*!*/
-        justify-content: center;/*水平居中*/
-        box-shadow: 0 4px 10px #ccc;
 
-    }
-    header .top-ct{
-        position: relative;
-        top: 12vh;
-    }
-    header .top-ct h1{
-        font-size: 50px;
-        letter-spacing: 20px;
-    }
-    header .top-ct h3{
-        letter-spacing: 5px;
-    }
-    header .top-ct>ul li{
-        padding-top: 16px;
-        text-align: center;
-    }
-
-    .center{
-
-        width:80vw;
-        margin: 140px auto;
-        text-align: center;
-        /*border: 1px solid red;*/
-        position: relative;
-    }
-
-    .introduce{
-        position: relative;
-        margin-top:30px;
-        display: flex;
-        /*justify-content: center;*/
-    }
-    .detail-head{
-        text-align: left;
-        border-bottom: 1px solid #4BCA64;
-        /*left: -300px;*/
-    }
-    .pic3{
-        /*float: left;*/
-        transition: all 2s;
-        text-align: left;
-        position: relative;
-        left: -350px;
-
-    }
-    .myself{
-        width:300px;
-        text-align: left;
-        margin-bottom: 30px;
-    }
-    .myself h5{
-        width: 700px;
-        /*margin-top: 42px;*/
-    }
-    .pic3 img{
-        width:300px;
-        height: auto;
-    }
-    .btn{
-        /*position: absolute;*/
-        /*top: 112px;*/
-        /*right: 10px;*/
-        margin-top:100px;
-        color: #FDE5DF;
-
-    }
-    .btn1{
-        width:264px;
-        height:52px;
-        border-radius: 26px;
-        /*margin: 12px 0;*/
-        border: none;
-        margin-left:80px;
-        box-shadow: -18px 20px 20px #ccc;
-    }
-    .btn2{
-        width:264px;
-        height:52px;
-        border-radius: 26px;
-        /*margin: 12px 0;*/
-        border: none;
-        margin-left:80px;
-        box-shadow: -18px 20px 20px #ccc;
-    }
-    .btn h3{
-        color: #FDE5DF;
-        font-size: initial;
-    }
-    .bg-green{
-        background-color: #4BCA64;
-    }
-    .bg-orange{
-        background-color: #FA4E39;
-    }
-    .worklist {
-        margin: 50px;
-        overflow: hidden;
-        box-shadow: 16px 20px 20px #ccc;
-    }
-
-    .works h1 {
-        color: #000;
-        padding-left: 50px;
-    }
-
-    .worklist a {
-        display: block;
-        float: left;
-        width: 50%;
-        height: 280px;
-        outline: 1px solid #fff;
-        overflow: hidden;
-        position: relative;
-        transition: opacity .35s, transform .35s;
-    }
-
-    .worklist img {
-        transition: opacity .35s, transform .35s;
-    }
-
-    .worklist h2 {
-        transition: all .35s;
-    }
-
-    .worklist p {
-        transition: all .35s;
-        font-size: 18px;
-    }
-
-    .worklist a::after {
-        transition: opacity .35s, transform .35s;
-        opacity: 0.3;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-
-    .worklist a:hover::after {
-        transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
-    }
-
-    .worklist a:hover img {
-        opacity: 0.35;
-        transform: scale3d(1.05, 1.05, 1);
-    }
-
-    .worklist img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .worklist a:hover h2 {
-        transform: translateY(-50%);
-    }
-
-    .worklist a:hover p {
-        transition-delay: 0.2s;
-        transform: translateY(25px);
-        opacity: 1;
-    }
-    .bg1 {
-        background: #FA4E39;
-    }
-
-    .bg2 {
-        background: #FA4E39;
-    }
-
-    .bg3 {
-        background: #FA4E39;
-    }
-
-    .bg4 {
-        background: #FA4E39;
-    }
-    .worklist h2 {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        text-align: center;
-        color: #4BCA64;
-    }
-
-    .worklist p {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        text-align: center;
-        top: 50%;
-        opacity: 0;
-        color: #FEFFFF;
-    }
-    .item{
-        position: relative;
-    }
-    .work{
-        position: absolute;
-        top: 20px;
-        right: 110px;
-        text-align: left;
-        width: 380px;
-    }
-    .skill img{
-        margin-top:20px;
-        text-align: left;
-        height:500px;
-        width:auto;
-    }
-    .top-ct h6>i{
-        font-size: 12px;
-        padding-left: 6px;
-        color: #FA4E39;
-    }
-    .bg-green i{
-        font-size: 18px;
-        padding-left: 8px;
-        color: #FDE5DF;
-    }
-    .iconfont {
-        transition: All 1s ;
-    }
-    .contact-ct li:hover .iconfont {
-        transform: rotate(360deg) scale(1.5);
-    }
-    .contact-ct{
-        display: flex;
-    }
-    .contact-ct li{
-        width: 20vw;
-        /* border: 1px solid #ccc; */
-        margin: 0 8px;
-        padding: 8px 0;
-        text-align: center;
-        background-color: #fff;
-        box-shadow:2px 2px 32px #ccc;
-        font-size:14px ;
-        line-height: 28px;
-        position: relative;
-    }
-    .contact-ct li>i{
-        padding-right: 28px;
-        font-size:24px ;
-        display: inline-block;
-        position: absolute;
-        left:22px
-    }
-    .top-name .goto{
-        transition:all .5s;
-        position: relative;
-        left: -80vw;
-    }
-</style>
 <body>
     <header>
         <div class="top">
@@ -332,38 +34,38 @@
                     <a href="javascript:void(0)"><img src="" alt=""></a>
                 </div>
                 <div class="item">
-                    <div class="worklist">
-                        <a class="bg1" href="https://github.com/JaeJiang/vue-project" target="_blank"><img src="http://i1.piimg.com/567571/133e6c6bf6d3ccaf.png" alt="">
-                            <h2>简历制作工具</h2>
-                            </a>
-                    </div>
-                    <div class="work">
-                        <h2>制作简历工具项目</h2>
-                        <h4>技术使用:Vue.js、vue-cli、Vuex、LeanCloud</h4>
-                        <p>功能可以实现:添加简历内容，包括个人信息、工作经历、学习经历、获奖情况、项目经历和联系方式
-                            。更新简历内容,选择简历,模板预览简历,发布简历.
-                        </p>
-                    </div>
+                    <!--<div class="worklist">-->
+                        <!--<a class="bg1" href="https://github.com/JaeJiang/vue-project" target="_blank"><img src="http://i1.piimg.com/567571/133e6c6bf6d3ccaf.png" alt="">-->
+                            <!--<h2>简历制作工具</h2>-->
+                            <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="work">-->
+                        <!--<h2>制作简历工具项目</h2>-->
+                        <!--<h4>技术使用:Vue.js、vue-cli、Vuex、LeanCloud</h4>-->
+                        <!--<p>功能可以实现:添加简历内容，包括个人信息、工作经历、学习经历、获奖情况、项目经历和联系方式-->
+                            <!--。更新简历内容,选择简历,模板预览简历,发布简历.-->
+                        <!--</p>-->
+                    <!--</div>-->
                 </div>
             </div>
             <div class="demos center">
-                <div class="detail-head">
-                    <h2 class="orange">Demo</h2>
-                </div>
+                <!--<div class="detail-head">-->
+                    <!--<h2 class="orange">Demo</h2>-->
+                <!--</div>-->
                 <div class="worklist">
-                    <a class="bg1" href="http://jianghangxuan.coding.me/resume/music-vue/page" target="_blank"><img src="http://p1.bqimg.com/567571/4e2f52b19b19ae9f.png" alt="">
+                    <a class="bg1" href="http://jianghangxuan.coding.me/resume/music-vue/page" target="_blank"><img src="imgs/d1.jpg" alt="">
                         <h2>Vue音乐播放器</h2>
                         <p>可以进行歌曲的暂停与播放，对歌曲的播放进度进行调节，并对歌词进行同步。播放上一首或者下一首时，获取的都是随机歌曲。可以进行音量的控制，满足一个基本的音乐播放器的功能。</p>
                     </a>
-                    <a class="bg2" href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank"><img src="http://i1.piimg.com/567571/9446de046b81d410.png" alt="">
+                    <a class="bg2" href="https://jaejiang.github.io/vue-project/step-3/page" target="_blank"><img src="imgs/d2.jpg" alt="">
                         <h2>Vue在线日程表</h2>
                         <p>1.用户可以新建一个待办事项2.用户可以删除一个待办事项3.用户可以将一个待办事项标记为已完成4.用户刷新页面之后，待办事项还在</p>
                     </a>
-                    <a class="bg3" href="https://jaejiang.github.io/resume/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1/" target="_blank"><img src="http://i1.piimg.com/567571/8cd7462a920c4c3a.png" alt="">
+                    <a class="bg3" href="https://jaejiang.github.io/resume/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1/" target="_blank"><img src="imgs/d3.jpg" alt="">
                         <h2>今日头条</h2>
                         <p>今日头条的首页仿站,用flex属性重新构造布局,得到更好的用户体验.</p>
                     </a>
-                    <a class="bg4" href="https://jaejiang.github.io/resume/waterfall-page/waterfall" target="_blank"><img src="http://p1.bqimg.com/567571/e0d5bce2f892370a.png" alt="">
+                    <a class="bg4" href="https://jaejiang.github.io/resume/waterfall-page/waterfall" target="_blank"><img src="imgs/d4.jpg" alt="">
                         <h2>知乎新闻简页</h2>
                         <p>类似知乎日报的首页,通过AJAX拿到新闻数据,再通过瀑布流的方式展现出来</p>
                     </a>
@@ -409,11 +111,11 @@
             <!--<div class="final-pic"></div>-->
             <div class="contact">
                 <ul class="contact-ct">
-                    <li><i class="iconfont icon-github"><a href="https://github.com/JaeJiang" target="_blank"></i>github</a></li>
-                    <li><i class="iconfont icon-jianshu"><a href="http://www.jianshu.com/u/3ecbe81ebc23" target="_blank"></i>简书blog</a></li>
-                    <li><i class="iconfont icon-weichat"><a href="http://p1.bqimg.com/567571/b41428d381a634aa.jpg" target="_blank"></i>微信</a></li>
-                    <li><i class="iconfont icon-phone"><a href="javascript:void(0)"></i>18817818001</a></li>
-                    <li><i class="iconfont icon-youxiang"></i><a href="mailto:jianghangxuan@foxmail.com?subject=Job Opportunity" target="_blank" style="padding-left: 8px">Josh@joshgo.top</a></li>
+                    <li><a href="https://github.com/JaeJiang" target="_blank"><i class="iconfont icon-github"></i>github</a></li>
+                    <li><a href="http://www.jianshu.com/u/3ecbe81ebc23" target="_blank"><i class="iconfont icon-jianshu"></i>简书blog</a></li>
+                    <li><a href="http://p1.bqimg.com/567571/b41428d381a634aa.jpg" target="_blank"><i class="iconfont icon-weichat"></i>微信</a></li>
+                    <li><a href="tel:18817818001"><i class="iconfont icon-phone"></i>18817818001</a></li>
+                    <li><a href="mailto:jianghangxuan@foxmail.com?subject=Job Opportunity" target="_blank" style="margin-left: 40px"><i class="iconfont icon-youxiang"></i>Josh@joshgo.top</a></li>
 
                 </ul>
                 <div class="btn">

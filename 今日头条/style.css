@@ -115,13 +115,30 @@ img{border:0;}
 
 
 /*//中间==============*/
-.main{
+#main{
     width: 660px;
-    background: #FAB646;
+    /*background: #FAB646;*/
     margin-top: 15px;
+    margin-right:31px;
 }
 
-
+#main .show .title{
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding-left: 22px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background-image: linear-gradient(-180deg,transparent 0,rgba(0,0,0,.8) 100%);
+}
 
 
 /*//右栏  */
@@ -137,7 +154,7 @@ img{border:0;}
     line-height: 20px;
     width: 340px;
     outline:0;
-    padding:9px 10px 9px 0;
+    padding:9px 10px 9px 10px;
     background: #f5f6f7;
     box-sizing: border-box;
     border-radius:4px;
@@ -152,7 +169,7 @@ img{border:0;}
     right: 7px;
     top: 7px;
 }
-.right-news{
+.right-style{
     /*height: 366px;*/
     overflow: hidden;
     margin-top:15px;
@@ -160,7 +177,7 @@ img{border:0;}
     border-top:2px solid #ed4040;
     margin-bottom:16px ;
 }
-.right-news h2{
+.right-style h2{
     color: #222;
     padding-top: 15px;
     padding-left: 20px;
@@ -190,12 +207,31 @@ img{border:0;}
     width: 60px;
     height: 60px;
 }
-
+.right .link-content{
+    overflow: hidden;
+    padding: 0 20px 15px;
+}
 .news-link{
     display: flex;
 }
-
-
+.link-content .item {
+    float: left;
+    margin-right: 10px;
+}
+.link-content .item a{
+    color: #777;
+    line-height: 30px;
+    font-size: 14px;
+}
+.company{
+    padding: 8px 20px;
+    border-top:none;
+}
+.company ,.company a{
+    color: #777;
+    line-height: 30px;
+    font-size: 14px;
+}
 /*中栏*/
 
 .window{
@@ -249,32 +285,17 @@ ul.bullet .active{
     background-color: #ed4040;
 }
 
-#main .show .title{
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    width: 100%;
-    height: 44px;
-    line-height: 44px;
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    padding-left: 22px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    background-image: linear-gradient(-180deg,transparent 0,rgba(0,0,0,.8) 100%);
-}
+
 
 .center-item{
+    position: relative;
+    display: flex;
     font-size: 20px;
     line-height:1.3;
     font-weight: 700;
     width: 660px;
     height: 123px;
     border-top: 1px solid #e8e8e8;
-    /*display: flex;*/
 }
 .center-item .wrap{
     display: flex;
@@ -286,6 +307,50 @@ ul.bullet .active{
     height: 101px;
 }
 .center-item p{
-    padding-left: 25px;
+    /*padding-left: 25px;*/
     padding-top: 25px;
+}
+.source{
+    margin-left:24px;
+    /*position: relative;*/
+}
+.source a{
+    font-size: 12px;
+    color: #999;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+.source a span{
+    font-size: 12px;
+    color: #B46AFF;
+    margin-right: 10px;
+    padding: 1px 2px;
+    height: 14px;
+    line-height: 14px;
+    border: 1px solid #B46AFF;
+}
+.source button{
+    position: absolute;
+    right:0;
+    bottom:20px;
+    color: #FFFFFF;
+    line-height:inherit;
+    border: none;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 4px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.source button:hover{
+    background-color: #f85959;
+}
+.source i{
+    font-style: normal;
+    font-weight:700;
+    color: #DDDDDD;
+    font-size:18px;
 }
