@@ -88,6 +88,9 @@ header .top-ct>ul li{
 }
 .myself h5{
     width: 700px;
+    line-height:28px;
+    font-size: 16px;
+    font-weight: 500;
     /*margin-top: 42px;*/
 }
 .pic3 img{
@@ -133,7 +136,7 @@ header .top-ct>ul li{
 .worklist {
     margin: 50px;
     overflow: hidden;
-    box-shadow: 16px 20px 20px #ccc;
+    /*box-shadow: 16px 20px 20px #ccc;*/
 }
 
 .works h1 {
@@ -165,7 +168,9 @@ header .top-ct>ul li{
     transition: all .35s;
     font-size: 18px;
 }
-
+.worklist p span{
+    display: block;
+}
 .worklist a::after {
     transition: opacity .35s, transform .35s;
     opacity: 0.3;
@@ -195,6 +200,7 @@ header .top-ct>ul li{
 .worklist img {
     width: 100%;
     height: 100%;
+    opacity: 0.8;
 }
 
 .worklist a:hover h2 {
@@ -207,19 +213,19 @@ header .top-ct>ul li{
     opacity: 1;
 }
 .bg1 {
-    background: #F4F5F0;
+    background: #52524F;
 }
 
 .bg2 {
-    background: #915851;
+    background: #52524F;
 }
 
 .bg3 {
-    background: #B0C3D1;
+    background: #52524F;
 }
 
 .bg4 {
-    background: #4D6789;
+    background: #52524F;
 }
 .worklist h2 {
     width: 100%;
@@ -227,7 +233,8 @@ header .top-ct>ul li{
     left: 0;
     top: 50%;
     text-align: center;
-    color: #4BCA64;
+    color: #FA4E39;
+    text-shadow: 1px 2px 2px black;
 }
 
 .worklist p {
