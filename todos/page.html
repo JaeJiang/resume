@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    <title>Title</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<style>
+		[v-cloak]{
+			display: none !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="todos" v-cloak>
+		<section id="sign" v-if="!currentUser">
+			<div class="container">
+				<h1>Todo List</h1>
+				<form  role="form" @submit.prevent >
+					<div class="signCheck form-group">
+						<span @click="changeSignType" :class="{signSelected:signType == 'signUp'}">注册</span>|<span @click="changeSignType" :class="{signSelected:signType == 'signIn'}">登录</span>
+					</div>
+
+					<div id="signIn" class="signIn" v-if="signType=='signIn'" >
+						<div class="form-group">
+							<label for="username">用户名：</label>
+							<input placeholder="josh" type="text" class="form-control" v-model="formData.username" />
+						</div>
+						<div class="form-group">
+							<label for="password">密码：</label>
+							<input placeholder="josh" type="password" class="form-control" v-model="formData.password" @key.enter="signUp" />
+						</div>
+						<input type="submit" class="btn  btn-inverse col-sm-6 col-sm-offset-3" value="登录" @click="signIn"/>
+					</div>
+					<div id="signUp" class="signUp" v-if="signType=='signUp' ">
+						<div class="form-group">
+							<label for="username">用户名：</label>
+							<input type="text" class="form-control" v-model="formData.username" />
+						</div>
+						<div class="form-group">
+							<label for="password">密码：</label>
+							<input type="password" class="form-control" v-model="formData.password" @key.enter="signUp"/>
+						</div>
+						<input type="submit" class="btn col-sm-6 col-sm-offset-3" value="注册" @click="signUp"/>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section id="todo-list" v-if="currentUser">
+			<div id="userInfo" class="clearFixed">
+				<span>Todo-List<span class="user">{{currentUser.username}}.</span></span>
+
+				<span class="signOut" @click="signOut">登出</span>
+				<span class="username">欢迎：{{currentUser.username}}</span>
+			</div>
+			<main class="clearFixed">
+				<div id="side-column" class="col-sm-3 col-md-2 col-xs-3">
+
+					<p @click="selectAll" :class="{selected:visibility == 'all'}"><i class="icon iconfont icon-shixiang"></i> 所有事项</p>
+					<p @click="selectTodo" :class="{selected:visibility == 'active'}"><i class="icon iconfont icon-daibanshixiang"></i> 待办事项</p>
+					<p @click="selectDone" :class="{selected:visibility == 'completed'}"><i class="icon iconfont icon-yibanshixiang"></i> 已办事项</p>
+					<h4>Lead with your strengths,not your weaknesses </h4>
+
+				</div>
+				<div id="content" class="col-sm-9 col-md-10 col-xs-9">
+					<form class="form-inline" role="form" @submit.prevent>
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="请添加新项目"  v-model="inputItem" @keyup.enter="addItem">
+							<div class="btn btn-info" @click="addItem" >添加事项</div>
+							<div class="btn btn-danger" @click="removeList">清空事项</div>
+						</div>
+					</form>
+					<ul class="list-group">
+						<li class="list-group-item list" v-for="item in filteredTodos">
+							<span v-show="item.isFinished" class="btn btn-sm btn-success"  @click="finished(item)">已完成</span>
+							<span v-show="!item.isFinished" class="btn btn-sm btn-danger" @click="finished(item)">待完成</span>
+							<span class="item" :class="{isFinished:item.isFinished}">{{item.name}}</span>
+							<span class="btn btn-warning right btn-sm" @click="removeItem(item)">删除</span>
+							<span class="time">创建时间：{{item.createTime}}</span>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</section>
+	</div>
+	<script src="./js/vendor.js"></script>
+    <script src="./js/bundle.js"></script>
+</body>
+</html>

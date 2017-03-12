@@ -1,0 +1,152 @@
+html,body,#todos,.wraps,main,section,section{
+  background:rgba(47, 47, 47, 0.98);
+  height:100%;
+  color: #3c3c3c;
+}
+.clearFixed:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.container{
+  position: absolute;
+  background:#fff;
+  width:320px;
+  border-radius: 5px;
+  box-shadow:#fff 0 0 2px 2px;
+  margin: 0 auto;
+  padding-bottom:30px;
+  transform: translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  h1{
+    text-align: center;
+  }
+  .signCheck{
+    font-size:25px;
+    text-align: center;
+    span{
+      font-size: 20px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    span:hover{
+      border-bottom: 1px solid #3c3c3c;
+    }
+    .signSelected{
+      border-bottom: 1px solid #3c3c3c;
+    }
+  }
+  .btn{
+    background: #3c3c3c;
+    color: #fff;
+  }
+  .btn:hover{
+    background: #333;
+    color: #ccc;
+  }
+}
+#userInfo{
+  font-family: '微软雅黑';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #ccc;
+  //box-shadow: 15px 14px 21px #ccc;
+
+
+  span{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+
+    //.user{
+    //  font-size: large;
+    //  color: thistle;
+    //}
+
+  }
+
+  span:first-child{
+    margin-left: 16px;
+    //font-family: "Showcard Gothic";
+    float:left;
+    font-weight:300;
+    font-size:26px;
+    color: #4F5090;
+    cursor: pointer;
+
+  }
+}
+main{
+  margin-top: 50px;
+  background:#fff;
+  border-top:1px solid #ccc;
+  #side-column{
+    float:left;
+    padding-top: 35px;
+    height:100%;
+    color:#fff;
+    background: #35404F;
+    text-align: center;
+    h4{
+      color:#0aa284;
+      margin-top:40px;
+    }
+    p{
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    p:hover{
+      background: #DFBA46;
+      color:#ff6600;
+    }
+  }
+  #content{
+    float: left;
+    margin-top: 35px;
+    .form-group{
+      padding:10px 0;
+    }
+    .list-group{
+
+    }
+  }
+}
+.isFinished{
+  text-decoration:line-through;
+  color:#ccc;
+}
+.selected{
+  color:#ff6600;
+}
+
+.item{
+  font-size:18px;
+  padding-left:30px;
+}
+ul{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.right{
+  float:right;
+}
+li:nth-child(odd){
+  background:#eee;
+}
+.list{
+  position: relative;
+}
+.time{
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  color: #ccc;
+  font-size: 14px;
+
+}
