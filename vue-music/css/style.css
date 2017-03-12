@@ -1,0 +1,262 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	font-size:14px;
+}
+
+html, body{
+	height: 100%;
+}
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+div#app{
+	height: 100%;
+	background-color: rgba(30,30,30,0.9);
+}
+
+
+.top-bar{
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	z-index: auto;
+
+
+}
+
+.left-bar a{
+	display: inline-block;
+	color: #fff;
+	padding-left:30px;
+	font-size:18px;
+}
+.left-bar .logo{
+	font-size:20px;
+}
+.right-bar{
+	padding-right:30px;
+}
+.right-bar a{
+	padding-right:15px;
+}
+.user{
+	position: absolute;
+	display: inline-block;
+	width:30px;
+	height:30px;
+	border:2px solid #fff;
+	border-radius: 50%;
+	right: 186px;
+	bottom: 14px;
+	background: url("http://p1.bpimg.com/567571/4c43ba1f5c6aa87a.jpg") center no-repeat ;
+	background-size: cover;
+}
+#search{
+	width: 46vw;
+	margin: 12px 0;
+	height: 38px;
+	border:none;
+	padding-left: 20px;
+}
+ input {
+	font-size:16px;
+	font-style: italic;
+}
+article{
+	height: 100%;
+	display: table;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+article .header{
+	width: 100%;
+	/*height:22px;*/
+	position: fixed;
+}
+.back{
+	padding: 0 100px;
+	width: 50%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: rgba(30,30,30,0.9);
+	padding-top:36px;
+}
+
+/*.song{*/
+	/*border: 1px solid black;*/
+/*}*/
+.item a,.singer a{
+	color: #fff;
+	padding-right:12px;
+	font-size: 12px;
+}
+.item svg{
+	padding-right:10px;
+}
+
+
+.singer .pic img{
+	width: 60px;
+	height: auto;
+	border: none;
+	border-radius: 50%;
+	margin-right:22px;
+}
+.singer{
+	position: relative;
+	left: -215px;
+	bottom:128px;
+	width: 306px;
+	color: #fff;
+	display: flex;
+}
+.singer a{
+	color: #fff;
+	padding-right:12px;
+}
+.singer a svg{
+	padding-right:4px;
+}
+.singer .detail{
+	position: relative;
+	top: 8px;
+}
+.vip{
+	font-size:0.1rem;
+}
+.footer{
+	padding: 0 0;
+	height: 40px;
+	width: 100vw;
+	display: block;
+	position: fixed;
+	left: 0;
+	bottom: 39px;
+	background: none;
+}
+article>.ctrl>div{
+	/*float: right;*/
+	width: 246px;
+	position: relative;
+	left: -57%;
+	bottom: 28px;
+}
+article>.ctrl>div>img{
+	width: 320px;
+	height: 320px;
+}
+article>.ctrl>div>section.key>a{
+	color: rgb(0,172,122);
+	margin: 0 12px;
+	display: block;
+	float: left;
+}
+.ctrl>div>section.key>a.left,
+.ctrl>div>section.key>a.right{
+	font-size: 30px;
+}
+.ctrl>div>section.key>a.start,
+.ctrl>div>section.key>a.stop{
+	font-size: 98px;
+}
+.ctrl>div>section.key>div.volume{
+	width: 106px;
+	height: 2px;
+	background-color: #ccc;
+	float: left;
+	margin-top: 24px;
+}
+.ctrl>div>section.key>div.volume>div.nowvolume{
+	width: 5px;
+	max-width: 100px;
+	height: 2px;
+	background-color: rgb(0,172,122);
+	float: left;
+}
+.ctrl>div>section.key>div.volume>div.volumepoint{
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: rgb(0,172,122);
+	float: left;
+	margin-top: -2px;
+}
+.ctrl>div>section.key{
+	height: 50px;
+	line-height: 50px;
+	margin: 30px 0;
+}
+aside.ctrl>div>section.process{
+	width:80vw;
+	border: 1px solid pink;
+}
+section.process>div.progress{
+	width: 100vw;
+	height: 3px;
+	background-color: #ccc;
+	margin-bottom: 25px;
+}
+section.process>div.progress>div.now{
+	width: 0;
+	height: 3px;
+	background-color: rgb(0,172,122);
+	float: left;
+}
+section.process>div.progress>div.point{
+	width: 6px;
+	height: 6px;
+	background-color: rgb(0,172,122);
+	border-radius: 50%;
+	float: left;
+	margin-top: -2px;
+}
+
+section.process>span{
+	color: #ccc;
+}
+section.process>span.songlength{
+	float: right;
+}
+
+article>.info>div.song{
+	/*height: 480px;*/
+	width: 400px;
+	/*border: 1px solid #ccc;*/
+	overflow: hidden;
+}
+article>.info>div.song>p.songname{
+	font-size: 30px;
+	color: #eee;
+	margin-bottom: 10px;
+}
+article>.info>div.song>p.artist{
+	font-size: 20px;
+	color: #999;
+	margin-bottom: 22px;
+}
+/*article>.info>div.song>ul.lyric{*/
+	/*height: 365px;*/
+	/*position: relative;*/
+	/*overflow: hidden;*/
+/*}*/
+/*article>.info>div.song>ul.lyric>div.cover{*/
+	/*z-index: 10;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+/*}*/
+/*article>.info>div.song>ul.lyric>li{*/
+	/*margin: 20px 0;*/
+	/*font-size: 16px;*/
+	/*color: #ccc;*/
+/*}*/
