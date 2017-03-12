@@ -33,8 +33,8 @@ a {
 }
 .top-bar .login {
     padding: 6px;
-    border: 1px solid red;
-    background: #FA4E39;
+    border: 1px solid #4BCA64;
+    background: #4BCA64;
     color: #fff;
     border-radius:4px ;
 }
