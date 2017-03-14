@@ -82,12 +82,12 @@ header .top-ct>ul li{
 
 }
 .myself{
-    width:300px;
+    width:70vw;
     text-align: left;
     margin-bottom: 30px;
 }
 .myself h5{
-    width: 700px;
+    /*width: 700px;*/
     line-height:28px;
     font-size: 16px;
     font-weight: 500;
@@ -322,4 +322,9 @@ li i{
 }
 .contact-ct .icon-youxiang{
     color: #73D8F7;
+}
+@media screen and (max-width: 900px){
+    .pic3 img{
+        display: none;
+    }
 }
