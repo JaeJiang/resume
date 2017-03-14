@@ -259,8 +259,9 @@ header .top-ct>ul li{
 .skill img{
     margin-top:20px;
     text-align: left;
-    height:500px;
-    width:auto;
+    width:70vw;
+    height:auto;
+
 }
 .top-ct h6>i{
     font-size: 12px;
