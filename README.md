@@ -9,5 +9,5 @@
 * [轮播](https://github.com/JaeJiang/resume/tree/master/slide)
 * [回到顶部](https://jaejiang.github.io/resume/回到顶部/回到顶部)
 * [图片懒加载](https://jaejiang.github.io/resume/图片懒加载/懒加载)
-* [瀑布流新闻](https://jaejiang.github.io/resume/waterfall-page/waterfall)
+* [瀑布流新闻](https://jaejiang.github.io/resume/waterfall/waterfall)
 * To Be Continue …...
