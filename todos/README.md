@@ -1,9 +1,13 @@
-# 使用步骤
+# 在线日程表
 
-- 安装插件
-``` npm install ```
+- 使用步骤
 
-- 运行webpack
-``` webpack ```
+  -  安装插件
+    ``` npm install ```
+  - 运行webpack
+    ``` webpack ```
+  - 打开page.html
 
-- 打开page.html
+  ​
+
+预览：[在线日程表](http://jianghangxuan.coding.me/todo/todos/page)
