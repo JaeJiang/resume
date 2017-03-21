@@ -131,7 +131,7 @@ var app = new Vue({
 					if((typeof parseInt(prop)) === 'number'){
 						var count = timeArr[prop];
 						count = count.substr(1,5);
-						if(lyrictxt === '音乐来自百度FM, by 饥人谷'){
+						if(lyrictxt === '音乐来自百度FM'){
 							lyrictxt = '音乐来自百度FM';
 						}
 						this.lyricArr[count] = lyrictxt;
