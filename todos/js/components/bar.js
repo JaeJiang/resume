@@ -1,5 +1,5 @@
 /**
- * Created by zm on 2017/1/10.
+ * Created by Josh
  */
 import Vue from "vue";
 import Store from "./storage";
