@@ -93,6 +93,10 @@ header .top-ct>ul li{
     font-weight: 500;
     /*margin-top: 42px;*/
 }
+.myself span{
+   font-weight: 200; 
+   color: #4DC962;
+}
 .pic3 img{
     width:300px;
     height: auto;
