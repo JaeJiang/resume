@@ -94,8 +94,9 @@ header .top-ct>ul li{
     /*margin-top: 42px;*/
 }
 .myself span{
-   font-weight: 200; 
-   color: #4DC962;
+    color: #FCD14E;
+    font-weight: 700;
+    padding: 0 4px;
 }
 .pic3 img{
     width:300px;
