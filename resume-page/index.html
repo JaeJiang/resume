@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>姜杭轩-前端工程师</title>
     <!--<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">-->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1, minimum-scale=1,user-scalable=no">
     <link rel="shortcut icon" href="http://onfg1fey2.bkt.clouddn.com/%E5%B1%B1%E8%84%89.png" type="image/x-icon" />
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_dfhrv20vcimdvx6r.css">
@@ -14,11 +14,16 @@
 <body>
     <header>
         <div class="top">
+            <video autoplay="autoplay" loop="loop">  
+                <source  src="http://onfg1fey2.bkt.clouddn.com/vision.mp4" type="video/mp4" > 
+                </video>
             <div class="top-ct">
+                 
                 <ul class="top-name">
-                    <li><h1 class="orange" style="font-weight: 200;">姜杭轩</h1></li>
-                    <li><h3>前端工程师</h3></li>
-                    <li><a href="javascript:void(0)" class="goto"><h6>  SEE WORKS<i class="iconfont icon-right"></i></h6></a></li>
+                    <li><h1 class="orange" >姜杭轩</h1></li>
+                    <li><h2>前端工程师</h2></li>
+                    <!--<li><a href="javascript:void(0)" class="goto"><h6>SEE WORKS</h6></a></li>
+                    <li><a href="javascript:void(0)" class="goto"><i class="iconfont icon-right"></i></a></li>-->
                 </ul>
             </div>
         </div>
@@ -154,6 +159,10 @@
                     "left","0"
             )
         })
+
+        var docH=(document.body.clientHeight||document.documentElement.clientHeight)-20;  
+        var docW=document.body.clientWidth||document.documentElement.clientWidth;  
+        alert(docH);  
 //vs code git测试
 
     </script>

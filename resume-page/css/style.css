@@ -21,32 +21,34 @@ a {
     display: inline;
 }
 .orange{
-    color: #FA4E39;
+    color: #DFBA46;
     display: inline-block;
 }
 .detail-head h1{
     display: inline;
 }
-header .top {
+/*header .top {
     background: url('http://onfg1fey2.bkt.clouddn.com/pic1.jpg')  no-repeat  center;
     background-size: cover;
     height: 85vh;
     display:flex;
-    /*align-items:center;!*垂直居中*!*/
-    justify-content: center;/*水平居中*/
+    justify-content: center;
     box-shadow: 0 4px 10px #ccc;
-
-}
+}*/
 header .top-ct{
     position: relative;
     top: 12vh;
 }
 header .top-ct h1{
-    font-size: 50px;
-    letter-spacing: 20px;
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: 300;
+    background-color: #000;
+    padding-left: 10px;
 }
-header .top-ct h3{
+header .top-ct h2{
     letter-spacing: 5px;
+    color: #000;
 }
 header .top-ct>ul li{
     padding-top: 16px;
@@ -307,6 +309,12 @@ li i{
     position: absolute;
     left:22px
 }
+.top-name{
+    z-index: 99999;
+    position: fixed;
+    top: 38vh;
+    left: 86vw;
+}
 .top-name .goto{
     transition:all .5s;
     position: relative;
@@ -334,3 +342,22 @@ li i{
         display: none;
     }
 }
+
+video{  
+    position: relative;  
+    right: 0px;  
+    bottom: 0px;  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+    /*加滤镜*/  
+    /*-webkit-filter: grayscale(100%);*/  
+    filter:grayscale(10%);  
+}  
+source{  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+}  
