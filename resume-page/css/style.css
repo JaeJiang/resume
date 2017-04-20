@@ -96,7 +96,7 @@ header .top-ct>ul li{
     /*margin-top: 42px;*/
 }
 .myself span{
-    color: #FCD14E;
+    color: #3983F0;
     font-weight: 700;
     padding: 0 4px;
 }
@@ -312,6 +312,7 @@ li i{
 .top-name{
     z-index: 99999;
     position: fixed;
+    /*transition: all 2s;*/
     top: 38vh;
     left: 86vw;
 }

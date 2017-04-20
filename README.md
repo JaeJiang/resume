@@ -2,7 +2,7 @@
 
 > 一些项目，demo
 
-* [我的在线简历👻](https://jaejiang.github.io/resume/resume-page/index)
+* [我的在线简历👻](http://jianghangxuan.coding.me/resumePage/resume-page/index)
 * [Vue音乐](http://jianghangxuan.coding.me/music/vue-music/page)
 * [今日头条](https://jaejiang.github.io/resume/今日头条/index)
 * [Vue在线日程表](http://jianghangxuan.coding.me/todo/todos/page)

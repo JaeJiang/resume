@@ -144,10 +144,21 @@
     <script>
 
         var $goto = $('.goto');
+        var $topName = $('.top-name');
+        // var scrollY = $(window.scrollY);
 
-        $goto.on('click',function(){
-            $(window).scrollTop(774);
+        $(window).on('scroll',function(e){
+            var scrollTop = $('body').scrollTop();
+            console.log(scrollTop);
+            if(scrollTop < 350){
+                $topName.show();
+            }else{
+                $topName.hide();
+            }
         })
+        // $goto.on('click',function(){
+        //     $(window).scrollTop(774);
+        // })
 
         $('.detail').on('mouseenter', function () {
             $(this).find('.pic3').css(
@@ -162,7 +173,7 @@
 
         var docH=(document.body.clientHeight||document.documentElement.clientHeight)-20;  
         var docW=document.body.clientWidth||document.documentElement.clientWidth;  
-        alert(docH);  
+         
 //vs code git测试
 
     </script>
