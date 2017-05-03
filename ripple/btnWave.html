@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>btnWave</title>
+    <style>
+         *{
+        margin: 0;
+        padding: 0;
+    }
+    .ripple {
+        margin: 32px;
+        background: pink;
+        display: block;
+        text-decoration: none;
+        padding: 1em;
+        width: 400px;
+        height: 40px;
+        position: relative;
+        overflow: hidden;
+    }
+    .animate {
+        animation: rip 0.8s ;
+        -moz-animation: rip 0.8s ;
+        -o-animation: rip 0.8s ;
+        -webkit-animation: rip 0.8s  ;
+    }
+    @keyframes rip {
+        100% {
+            -webkit-transform: scale(1);
+            opacity: 0
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="ripple" >
+       <h1>Josh</h1> 
+    </div>
+    
+    <script>
+        $(function(){
+            $(".ripple").click(function(e){
+                if ($(this).find("#wave").length){
+                    $(this).find("#wave").remove();
+                }
+                $(this).append("<div id='wave'></div>");
+                var wave=$(this).find("#wave");
+                wave.css({
+                    "display": " block",
+                    //涟漪的颜色
+                    "background": " rgba(0, 175, 255, 0.8)",
+                    "border-radius": " 50%",
+                    "position": " absolute",
+                    "-webkit-transform": " scale(0)",
+                    "transform": " scale(0)",
+                    "opacity": " 1",
+                    //涟漪的速度
+                    "transition": " all 0.7s",
+                    "-webkit-transition": " all 0.7s",
+                    "-moz-transition": " all 0.7s",
+                    "-o-transition": " all 0.7s",
+                    "z-index": " 1",
+                    "overflow": " hidden",
+                    "pointer-events": " none"
+                });
+                // 获取ripple的宽度和高度
+                waveWidth = parseInt($(this).outerWidth());
+                waveHeight = parseInt($(this).outerHeight());
+                if(waveWidth < waveHeight){
+                    var R= waveHeight;
+                }else {
+                    var R= waveWidth;
+                    }
+                wave.css({
+                    "width":(R*2)+"px",
+                    "height":(R*2)+"px",
+                    "top": (e.pageY -$(this).offset().top - R)+'px',
+                    "left": ( e.pageX -$(this).offset().left -R)+'px',
+                    "transform":"scale(1)",
+                    "-webkit-transform":"scale(1)",
+                    "opacity":"0"
+                });
+        });
+    });
+</script>
+</body>
+</html>
