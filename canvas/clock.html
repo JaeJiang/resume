@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CVS clock</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 250px;
+        }
+        #clock{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="clock" height="200px" width="200px"></canvas>
+    </div>
+    <script>
+        var dom = document.getElementById('clock');
+        var ctx = dom.getContext('2d');
+        var width = ctx.canvas.width;
+        var height = ctx.canvas.height;
+        var r = width/2;
+
+        function drawBackground() {
+            ctx.translate(r,r);
+            ctx.beginPath();
+            ctx.lineWidth = 10;
+            ctx.arc(0,0,r-5,0,2*Math.PI,false);
+            ctx.stroke();
+            
+            
+        }
+
+        drawBackground();
+        
+    </script>
+</body>
+</html>
