@@ -27,6 +27,7 @@
         var r = width/2;
 
         function drawBackground() {
+            ctx.save();
             ctx.translate(r,r);
             ctx.beginPath();
             ctx.lineWidth = 10;
@@ -113,11 +114,25 @@
                 ctx.fill();
             }
 
-        drawBackground();
-        drawHour(4,30);
-        drawMinute(30);
-        drawSecond(15);
-        drawDot();
+        
+
+        function draw() {
+            ctx.clearRect(0,0,width ,height)
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            drawBackground();
+            drawDot();
+            drawHour(hour,minute);
+            drawMinute(minute);
+            drawSecond(second);
+            ctx.restore();
+        }
+
+        draw();
+
+        setInterval(draw, 1000);
     </script>
 </body>
 </html>
