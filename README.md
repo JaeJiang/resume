@@ -10,6 +10,7 @@
 * [jQ 回到顶部](https://jaejiang.github.io/resume/回到顶部/回到顶部)
 * [jQ 图片懒加载](https://jaejiang.github.io/resume/图片懒加载/懒加载)
 * [jQ 瀑布流新闻](https://jaejiang.github.io/resume/waterfall/waterfall)
+* [日期选择](https://jaejiang.github.io/resume/datepicker/datepicker)
 * [jQ 点击涟漪](https://jaejiang.github.io/resume/ripple/btnWave)
 * [canvas 时钟](https://jaejiang.github.io/resume/canvas/clock)
 * To Be Continue …...
