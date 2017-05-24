@@ -13,4 +13,6 @@
 * [日期选择](https://jaejiang.github.io/resume/datepicker/datepicker)
 * [jQ 点击涟漪](https://jaejiang.github.io/resume/ripple/btnWave)
 * [canvas 时钟](https://jaejiang.github.io/resume/canvas/clock)
+* [全部方案元素水平垂直居中](https://jaejiang.github.io/resume/%E5%85%A8%E9%83%A8%E6%96%B9%E6%A1%88%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.png)
+
 * To Be Continue …...
